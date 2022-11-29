@@ -30,7 +30,18 @@ async function run() {
             res.send(result)
         })
 
-       
+        app.get('/bikeCollections', async(req, res) => {
+            const query = {}
+            const result = await bikeCollections.find(query).toArray()
+            res.send(result)
+        })
+        
+        // send bike data to db from client side
+        app.post('/bikeCollections', async(req, res) => {
+            const bikes = req.body
+            const result = await bikeCollections.insertOne(bikes)
+            res.send(result)
+        })
 
         // app.get('/bikeCategory/:id', (req, res) => {
         //     const bikeCategory = req.params.id

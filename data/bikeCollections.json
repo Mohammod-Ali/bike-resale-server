@@ -1,18 +1,21 @@
 
 [
     {
-        "name": "SUJUKI",
-        "categoryId": "SUJUKI",
+        "name": "SUZUKI",
+        "categoryId": "SUZUKI",
+        "descriptions": "Suzuki manufactures automobiles, motorcycles, all-terrain vehicles (ATVs), outboard marine engines, wheelchairs and a variety of other small internal combustion engines. In 2016, Suzuki was the eleventh biggest automaker by production worldwide.",
         "img": "https://images.unsplash.com/photo-1621713939155-e35df91a3262?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3V6dWtpJTIwbW90b3JjeWNsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
     },
     {
         "name": "YAMAHA",
         "categoryId": "YAMAHA",
+        "descriptions": "Suzuki manufactures automobiles, motorcycles, all-terrain vehicles (ATVs), outboard marine engines, wheelchairs and a variety of other small internal combustion engines. In 2016, Suzuki was the eleventh biggest automaker by production worldwide.",
         "img": "https://images.unsplash.com/photo-1616889154907-0c5f6721dcba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8WWFtYWhhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
     },
     {
         "name": "HONDA",
         "categoryId": "HONDA",
+        "descriptions": "Suzuki manufactures automobiles, motorcycles, all-terrain vehicles (ATVs), outboard marine engines, wheelchairs and a variety of other small internal combustion engines. In 2016, Suzuki was the eleventh biggest automaker by production worldwide.",
         "img": "https://images.unsplash.com/photo-1502744688674-c619d1586c9e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG9uZGF8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
     }
 ]

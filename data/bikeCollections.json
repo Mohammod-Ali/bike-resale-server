@@ -1,0 +1,18 @@
+
+[
+    {
+        "name": "SUJUKI",
+        "categoryId": "SUJUKI",
+        "img": "https://images.unsplash.com/photo-1621713939155-e35df91a3262?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3V6dWtpJTIwbW90b3JjeWNsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+    },
+    {
+        "name": "YAMAHA",
+        "categoryId": "YAMAHA",
+        "img": "https://images.unsplash.com/photo-1616889154907-0c5f6721dcba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8WWFtYWhhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
+    },
+    {
+        "name": "HONDA",
+        "categoryId": "HONDA",
+        "img": "https://images.unsplash.com/photo-1502744688674-c619d1586c9e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG9uZGF8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+    }
+]

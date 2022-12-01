@@ -23,6 +23,7 @@ async function run() {
         const bikeCollections = client.db('bikeResale').collection('bikeCollections')
         const bikeCategories = client.db('bikeResale').collection('categories')
         const usersCollections = client.db('bikeResale').collection('users')
+        const bookingsCollections = client.db('bikeResale').collection('bookings')
 
 
         app.get('/bikeCategories', async (req, res) => {
@@ -48,6 +49,22 @@ async function run() {
         app.post('/users', async(req, res) => {
             const user = req.body;
             const result = await usersCollections.insertOne(user)
+            res.send(result)
+        })
+
+        
+        
+        // save the bookings data
+        app.post('/bookings', async(req, res) => {
+            const booking = req.body;
+            const result = await bookingsCollections.insertOne(booking)
+            res.send(result)
+        })
+
+        app.get('/bookings', async(req, res) => {
+            const email = req.query.email
+            const query = { email: email}
+            const result = await bookingsCollections.find(query).toArray()
             res.send(result)
         })
 

@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 require('dotenv').config()
 const port = process.env.PORT || 5000
 
@@ -32,6 +32,7 @@ async function run() {
             res.send(result)
         })
 
+        // load bike dada from db
         app.get('/bikeCollections', async(req, res) => {
             const query = {}
             const result = await bikeCollections.find(query).toArray()
@@ -52,7 +53,21 @@ async function run() {
             res.send(result)
         })
 
-        
+        //check the admin from db
+        app.get('/users/admin/:email', async( req, res ) => {
+            const email = req.params.email
+            const query = { email }
+            const user = await usersCollections.findOne(query)
+            res.send({isAdmin: user?.category === 'admin'})
+        })
+
+        //check the seller role from db
+        app.get('/users/seller/:email', async( req, res ) => {
+            const email = req.params.email
+            const query = { email }
+            const user = await usersCollections.findOne(query)
+            res.send({isSeller: user?.category === 'seller'})
+        })
         
         // save the bookings data
         app.post('/bookings', async(req, res) => {
@@ -61,6 +76,7 @@ async function run() {
             res.send(result)
         })
 
+        //get booking data from db
         app.get('/bookings', async(req, res) => {
             const email = req.query.email
             const query = { email: email}

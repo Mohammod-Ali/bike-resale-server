@@ -46,10 +46,26 @@ async function run() {
             res.send(result)
         })
 
+        // delete the bike data
+        app.delete('/bikeCollections/:id', async( req, res ) => {
+            const id = req.params.id;
+            const query = {_id: ObjectId(id)}
+            const result = await bikeCollections.deleteOne(query)
+            res.send(result)
+        })
+        
+
         // save the users data
         app.post('/users', async(req, res) => {
             const user = req.body;
             const result = await usersCollections.insertOne(user)
+            res.send(result)
+        })
+
+        // get the all user data
+        app.get('/users', async (req, res) => {
+            const query = {}
+            const result = await usersCollections.find(query).toArray()
             res.send(result)
         })
 
@@ -68,6 +84,14 @@ async function run() {
             const user = await usersCollections.findOne(query)
             res.send({isSeller: user?.category === 'seller'})
         })
+
+        // delete user data from db
+        app.delete('/users/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = {_id: ObjectId(id)}
+            const result = await usersCollections.deleteOne(query)
+            res.send(result)
+        })
         
         // save the bookings data
         app.post('/bookings', async(req, res) => {
@@ -84,10 +108,7 @@ async function run() {
             res.send(result)
         })
 
-        // app.get('/bikeCategory/:id', (req, res) => {
-        //     const bikeCategory = req.params.id
-        //     console.log(bikeCategory)
-        // })
+        
     }
     finally{
 
